@@ -6,7 +6,7 @@ if [ -d "env" ]; then
 fi
 
 echo $PWD
-source env/bin/activate
+source env/Scripts/activate
 
 if [ -d "logs" ]; then 
     echo "log folder exists"
