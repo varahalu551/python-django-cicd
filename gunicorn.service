@@ -4,6 +4,7 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
+[Service]
 User=jenkins
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd/app
 ExecStart=/var/lib/jenkins/workspace/django-cicd/env/bin/gunicorn \
