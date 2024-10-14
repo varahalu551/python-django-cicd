@@ -5,7 +5,6 @@ After=network.target
 
 [Service]
 User=root
-Group=www-data
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd/app
 ExecStart=/var/lib/jenkins/workspace/django-cicd/env/bin/gunicorn \
           --error-logfile /var/lib/jenkins/workspace/django-cicd/error.log \
