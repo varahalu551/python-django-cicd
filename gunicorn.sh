@@ -9,7 +9,8 @@ cd /var/lib/jenkins/workspace/django-cicd/app
 # Make migrations and migrate
 python manage.py makemigrations
 python manage.py migrate
-python manage.py collectstatic --no-input
+# Uncomment the next line if you want to collect static files
+# python manage.py collectstatic --no-input
 
 echo "Migrations Done"
 
