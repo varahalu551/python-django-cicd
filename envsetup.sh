@@ -41,14 +41,16 @@ else
 fi
 
 # Set permissions for the logs directory
-# Use this if passwordless sudo is set up, or provide password with `-S`
-sudo chmod -R 777 logs
-echo "Permissions for logs set to 777."
+sudo chmod -R 755 logs
+echo "Permissions for logs set to 755."
 
 # Install required packages from requirements.txt
 if [ -f "requirements.txt" ]; then
     echo "Installing packages from requirements.txt..."
-    pip install -r requirements.txt
+    if ! pip install -r requirements.txt; then
+        echo "Package installation failed. Check logs/error.log for details."
+        exit 1  # Exit the script with an error code
+    fi
 else
     echo "requirements.txt file not found. Skipping package installation."
 fi
