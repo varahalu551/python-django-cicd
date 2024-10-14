@@ -2,11 +2,12 @@
 
 if [ -d "env" ]; then 
     echo "Python virtual env exists"
-    python -m venv env
+   
+
 fi
 
 echo $PWD
-source env/Scripts/activate
+source env/bin/activate
 
 if [ -d "logs" ]; then 
     echo "log folder exists"
