@@ -14,7 +14,7 @@ python3 manage.py migrate
 
 echo "Migrations Done"
 
-cd /var/lib/jenkins/workspace/test
+cd /var/lib/jenkins/workspace/django-cicd
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
