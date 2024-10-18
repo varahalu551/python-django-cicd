@@ -4,7 +4,7 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=root
+User=jenkins
 Group=www-data  # Ensure that the group is set correctly
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd/app
 Environment="PATH=/var/lib/jenkins/workspace/django-cicd/env/bin"  # Set the virtual environment path
