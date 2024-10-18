@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Activate the virtual environment
-source /var/lib/jenkins/workspace/django-cicd/env/bin/activate
+#source /var/lib/jenkins/workspace/django-cicd/
 
 # Navigate to the Django application directory
 cd /var/lib/jenkins/workspace/django-cicd/app
@@ -14,9 +14,20 @@ python manage.py migrate
 
 echo "Migrations Done"
 
+cd /var/lib/jenkins/workspace/django-cicd
+sudo cp -rf gunicorn.socket /etc/systemd/system/
+sudo cp -rf gunicorn.service /etc/systemd/system/
+
+echo "$USER"
+echo "$PWD"
+
 # Restart Gunicorn service
 sudo systemctl daemon-reload
-sudo systemctl restart gunicorn
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+
+echo "Gunicorn has been started"
 
 # Check Gunicorn service status
 sudo systemctl status gunicorn
+sudo systemctl rest
