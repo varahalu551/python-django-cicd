@@ -30,4 +30,4 @@ echo "Gunicorn has been started"
 
 # Check Gunicorn service status
 sudo systemctl status gunicorn
-sudo systemctl rest
+sudo systemctl restart gunicorn
