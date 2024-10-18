@@ -4,7 +4,7 @@
 #source /var/lib/jenkins/workspace/django-cicd/
 
 # Navigate to the Django application directory
-cd /var/lib/jenkins/workspace/django-cicd/app
+cd /var/lib/jenkins/workspace/test/app
 
 # Make migrations and migrate
 python manage.py makemigrations
@@ -14,7 +14,7 @@ python manage.py migrate
 
 echo "Migrations Done"
 
-cd /var/lib/jenkins/workspace/django-cicd
+cd /var/lib/jenkins/workspace/test
 sudo cp -rf gunicorn.socket /etc/systemd/system/
 sudo cp -rf gunicorn.service /etc/systemd/system/
 

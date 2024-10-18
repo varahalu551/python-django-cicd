@@ -8,6 +8,7 @@ fi
 
 echo $PWD
 source env/bin/activate
+pip3 install -r requrements.txt
 
 if [ -d "logs" ]; then 
     echo "log folder exists"
