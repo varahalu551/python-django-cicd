@@ -4,7 +4,7 @@
 #source /var/lib/jenkins/workspace/django-cicd/
 
 # Navigate to the Django application directory
-cd /var/lib/jenkins/workspace/test/app
+cd /var/lib/jenkins/workspace/django-cicd/app
 
 # Make migrations and migrate
 python manage.py makemigrations
