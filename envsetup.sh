@@ -5,10 +5,12 @@ if [ -d "env" ]; then
    
 
 fi
+sudo apt-get install python3-venv
+python3 -m venv env
 
 echo $PWD
 source env/bin/activate
-pip3 install -r requrements.txt
+pip3 install -r  requirements.txt
 
 if [ -d "logs" ]; then 
     echo "log folder exists"
