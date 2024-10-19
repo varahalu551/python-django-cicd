@@ -4,10 +4,10 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=jenkins
+User=root
 Group=www-data
 WorkingDirectory=/var/lib/jenkins/workspace/django-cicd/app
-Environment="PATH=/var/lib/jenkins/workspace/django-cicd/env/bin"
+#Environment="PATH=/var/lib/jenkins/workspace/django-cicd/env/bin"
 ExecStart=/var/lib/jenkins/workspace/django-cicd/env/bin/gunicorn \
           --error-logfile /var/lib/jenkins/workspace/django-cicd/error.log \
           --workers 3 \

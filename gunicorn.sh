@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Activate the virtual environment
+source env/bin/activate
 #source /var/lib/jenkins/workspace/django-cicd/
 
 # Navigate to the Django application directory

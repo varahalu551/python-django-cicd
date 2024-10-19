@@ -1,18 +1,20 @@
 #!/bin/bash
 
-if [ -d "env" ]; then 
+if [ -d "env" ] then 
     echo "Python virtual env exists"
-   
+
 
 fi
-sudo apt-get install python3-venv
-python3 -m venv env
+else
+   sudo apt-get install python3-venv
+   python3 -m venv env
+ fi  
 
 echo $PWD
 source env/bin/activate
 pip3 install -r  requirements.txt
 
-if [ -d "logs" ]; then 
+if [ -d "logs" ] then 
     echo "log folder exists"
 else
     mkdir logs
