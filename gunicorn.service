@@ -12,7 +12,7 @@ ExecStart=/var/lib/jenkins/workspace/django-cicd/env/bin/gunicorn \
           --error-logfile /var/lib/jenkins/workspace/django-cicd/error.log \
           --workers 3 \
           --capture-output --log-level debug \
-          --bind unix:/var/run/gunicorn.sock \
+          --bind unix:/run/gunicorn.sock \
           app.wsgi:application
 
 [Install]

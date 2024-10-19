@@ -2,7 +2,7 @@
 Description=gunicorn socket
 
 [Socket]
-ListenStream=/var/run/gunicorn.sock
+ListenStream=/run/gunicorn.sock
 # The socket will inherit file descriptors by socket activation.
 SocketUser= root                
 #SocketGroup=www-data
