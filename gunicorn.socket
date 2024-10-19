@@ -4,7 +4,7 @@ Description=gunicorn socket
 [Socket]
 ListenStream=/run/gunicorn.sock
 # The socket will inherit file descriptors by socket activation.
-SocketUser= root                
+SocketUser= jenkins                
 #SocketGroup=www-data
 #SocketMode=0660
 
